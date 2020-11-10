@@ -2,8 +2,6 @@ package csp
 
 import (
 	"testing"
-
-	"github.com/stretchr/testify/assert"
 )
 
 func TestPolicy(t *testing.T) {
@@ -77,7 +75,10 @@ func TestPolicy(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			policy := tt.policy()
-			assert.Equal(t, tt.expectedString, policy.String())
+			actual := policy.String()
+			if tt.expectedString != actual {
+				t.Fatalf("\nwant %v,\n got %v", tt.expectedString, actual)
+			}
 		})
 	}
 }

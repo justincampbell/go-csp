@@ -45,8 +45,7 @@ const (
 )
 
 var (
-	// Directives are a list of valid directives.
-	Directives = []string{
+	validDirectives = []string{
 		DefaultSrc,
 		ScriptSrc,
 		ObjectSrc,
@@ -112,7 +111,7 @@ func (p *Policy) Add(directive string, values ...string) error {
 // header.
 func (p *Policy) String() string {
 	var b bytes.Buffer
-	for _, d := range Directives {
+	for _, d := range validDirectives {
 		values, ok := p.Directives[d]
 		if ok {
 			b.WriteString(d + " ")
@@ -124,7 +123,7 @@ func (p *Policy) String() string {
 }
 
 func validateDirective(directive string) error {
-	for _, d := range Directives {
+	for _, d := range validDirectives {
 		if directive == d {
 			return nil
 		}

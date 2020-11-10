@@ -26,6 +26,7 @@ const (
 	ReportURI    = "report-uri"
 
 	// Resource types
+	Any          = "*"
 	None         = "'none'"
 	Self         = "'self'"
 	UnsafeInline = "'unsafe-inline'"

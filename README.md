@@ -1,6 +1,7 @@
 # go-csp
 
 [![GoDoc](https://godoc.org/github.com/justincampbell/go-csp?status.svg)](https://godoc.org/github.com/justincampbell/go-csp)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/justincampbell/go-csp)](https://pkg.go.dev/github.com/justincampbell/go-csp)
 
 Go library for generating a [Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) header, offering the following benefits:
 
